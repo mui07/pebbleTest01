@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class com.example.springpebble.control.BoardControllerTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class com.example.springpebble.control.BoardControllerTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.example.springpebble.control.html">com.example.springpebble.control</a> &gt; BoardControllerTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">1</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">3.290s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox failures" id="successRate">
+<div class="percent">0%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Failed tests</a>
+</li>
+<li>
+<a href="#tab1">Tests</a>
+</li>
+<li>
+<a href="#tab2">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="board_list_count"></a>
+<h3 class="failures">board_list_count</h3>
+<span class="code">
+<pre>org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+### The error may exist in file [C:\workspace\pebbleTest\build\resources\main\mapper\BoardMapper.xml]
+### The error may involve com.example.springpebble.mapper.BoardMapper.selectBoardCount
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:77)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:446)
+	at com.sun.proxy.$Proxy75.selectOne(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:166)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:82)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:59)
+	at com.sun.proxy.$Proxy76.selectBoardCount(Unknown Source)
+	at com.example.springpebble.service.BoardService.selectBoardCount(BoardService.java:24)
+	at com.example.springpebble.control.BoardControllerTest.board_list_count(BoardControllerTest.java:25)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:252)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:175)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:157)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:46)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+### The error may exist in file [C:\workspace\pebbleTest\build\resources\main\mapper\BoardMapper.xml]
+### The error may involve com.example.springpebble.mapper.BoardMapper.selectBoardCount
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:150)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:141)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:77)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	... 60 more
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:80)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:82)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:68)
+	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:336)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:84)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:136)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:148)
+	... 67 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:989)
+	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:341)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2189)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2222)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2017)
+	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:779)
+	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:117)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:123)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:375)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:204)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:459)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:533)
+	at com.zaxxer.hikari.pool.HikariPool.&lt;init&gt;(HikariPool.java:114)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:97)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:111)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:77)
+	... 76 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211)
+	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:300)
+	... 98 more
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="failures">board_list_count</td>
+<td class="failures">3.290s</td>
+<td class="failures">failed</td>
+</tr>
+</table>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>17:49:06.609 [Test worker] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class com.example.springpebble.control.BoardControllerTest]
+17:49:06.620 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+17:49:06.631 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+17:49:06.652 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.example.springpebble.control.BoardControllerTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+17:49:06.673 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.springpebble.control.BoardControllerTest], using SpringBootContextLoader
+17:49:06.679 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.example.springpebble.control.BoardControllerTest]: class path resource [com/example/springpebble/control/BoardControllerTest-context.xml] does not exist
+17:49:06.680 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.example.springpebble.control.BoardControllerTest]: class path resource [com/example/springpebble/control/BoardControllerTestContext.groovy] does not exist
+17:49:06.680 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.example.springpebble.control.BoardControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+17:49:06.681 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.springpebble.control.BoardControllerTest]: BoardControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+17:49:06.735 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.example.springpebble.control.BoardControllerTest]
+17:49:06.747 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Adding PropertySource 'systemProperties' with lowest search precedence
+17:49:06.747 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Adding PropertySource 'systemEnvironment' with lowest search precedence
+17:49:06.748 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [MapPropertySource@510696938 {name='systemProperties', properties={java.runtime.name=Java(TM) SE Runtime Environment, sun.boot.library.path=C:\cku_project\app\jdk1.8.0_121\jre\bin, java.vm.version=25.121-b13, java.vm.vendor=Oracle Corporation, java.vendor.url=http://java.oracle.com/, path.separator=;, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, file.encoding.pkg=sun.io, user.script=, sun.java.launcher=SUN_STANDARD, user.country=KR, sun.os.patch.level=, java.vm.specification.name=Java Virtual Machine Specification, user.dir=C:\workspace\pebbleTest, java.runtime.version=1.8.0_121-b13, java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment, java.endorsed.dirs=C:\cku_project\app\jdk1.8.0_121\jre\lib\endorsed, os.arch=amd64, java.io.tmpdir=C:\Users\mui\AppData\Local\Temp\, line.separator=
+, java.vm.specification.vendor=Oracle Corporation, user.variant=, os.name=Windows 10, sun.jnu.encoding=MS949, java.library.path=C:\cku_project\app\jdk1.8.0_121\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;E:\app\무무\무무\product\11.2.0\client_1;E:\app\product\11.2.0\dbhome_1\bin;C:\ProgramData\Oracle\Java\javapath;C:\cku_project\app\jdk1.8.0_121\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\libnvvp;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\mui\Documents\gradle\bin;C:\Users\mui\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Bandizip\;;., java.specification.name=Java Platform API Specification, java.class.version=52.0, org.gradle.native=false, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, os.version=10.0, user.home=C:\Users\mui, user.timezone=Asia/Seoul, java.awt.printerjob=sun.awt.windows.WPrinterJob, file.encoding=x-windows-949, java.specification.version=1.8, java.class.path=C:\workspace\pebbleTest\build\classes\java\test;C:\workspace\pebbleTest\build\resources\test;C:\workspace\pebbleTest\build\classes\java\main;C:\workspace\pebbleTest\build\resources\main;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-aop\1.5.9.RELEASE\fab419df8d7a13968a51ebfcbcad7ef320d66184\spring-boot-starter-aop-1.5.9.RELEASE.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-security\1.5.9.RELEASE\f6ee3598d26440007927c67371406f2433c13e2d\spring-boot-starter-security-1.5.9.RELEASE.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-web\1.5.9.RELEASE\bda9733d5e6ba6d1a97deead1738713dc0631b3e\spring-boot-starter-web-1.5.9.RELEASE.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.mybatis.spring.boot\mybatis-spring-boot-starter\1.3.1\f67bd22f518df4b56e6647c90692529af4715a10\mybatis-spring-boot-starter-1.3.1.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\com.zaxxer\HikariCP\2.7.4\c101cbc2d07c0adffa0857e742229ef785892699\HikariCP-2.7.4.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\com.mitchellbosecke\pebble-spring4\2.4.0\b2811c36eef6f50c6c3ddcdc54d4a7b7094e693e\pebble-spring4-2.4.0.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.apache.tomcat.embed\tomcat-embed-jasper\8.5.23\92c6a7b2622d71d167107e43dd3a346fc59d86e0\tomcat-embed-jasper-8.5.23.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\javax.servlet\javax.servlet-api\3.1.0\3cd63d075497751784b2fa84be59432f4905bf7c\javax.servlet-api-3.1.0.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\mysql\mysql-connector-java\5.1.44\61b6b998192c85bb581c6be90e03dcd4b9079db4\mysql-connector-java-5.1.44.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-test\1.5.9.RELEASE\b5adf6fbf53be00b7ae52f657d564122edbe5156\spring-boot-starter-test-1.5.9.RELEASE.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.springframework.security\spring-security-test\4.2.3.RELEASE\f93339f597290d85a596f25a7841b9109b79ced6\spring-security-test-4.2.3.RELEASE.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-jdbc\1.5.9.RELEASE\6769ecea55e952afb64f17975638c5afd1e59ef3\spring-boot-starter-jdbc-1.5.9.RELEASE.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter\1.5.9.RELEASE\6bfb34db2715ee86c6e2337fa145650588b4b1b3\spring-boot-starter-1.5.9.RELEASE.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.springframework.security\spring-security-config\4.2.3.RELEASE\9f3771903616e33521836fd999d63efbfebf90d\spring-security-config-4.2.3.RELEASE.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.springframework.security\spring-security-web\4.2.3.RELEASE\7a03e737484ca232d7146852f06d067ac21427ac\spring-security-web-4.2.3.RELEASE.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.springframework\spring-webmvc\4.3.13.RELEASE\87a095c7a1d13fe433ae6712787238c1dbaa6919\spring-webmvc-4.3.13.RELEASE.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.springframework\spring-web\4.3.13.RELEASE\7cd084992d546165ede3e99bc31ee49c937f0ce7\spring-web-4.3.13.RELEASE.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.springframework.security\spring-security-core\4.2.3.RELEASE\5c0e47a47036c94d6fdd02696bf52be6d1adbd4d\spring-security-core-4.2.3.RELEASE.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-test-autoconfigure\1.5.9.RELEASE\b428495e25b0531b2a977f51c5d29011c817b8ee\spring-boot-test-autoconfigure-1.5.9.RELEASE.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-test\1.5.9.RELEASE\7e604d56325f04a8b89a280e647746fc69e5a21f\spring-boot-test-1.5.9.RELEASE.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.mybatis.spring.boot\mybatis-spring-boot-autoconfigure\1.3.1\af4ba7d4594459cbad87cb5561c271da26df3aa\mybatis-spring-boot-autoconfigure-1.3.1.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-autoconfigure\1.5.9.RELEASE\88dd18bdaf317ae40971573a051fd47265f2ed39\spring-boot-autoconfigure-1.5.9.RELEASE.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot\1.5.9.RELEASE\f472cdf948288796fb31e0bb03f6e7b022b763a0\spring-boot-1.5.9.RELEASE.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.springframework\spring-context\4.3.13.RELEASE\6ab1c189a13182fa3256f6bbc68fafdaf8f5a19e\spring-context-4.3.13.RELEASE.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.springframework\spring-aop\4.3.13.RELEASE\61f427b55951f59b50f3c2bd0de3c48960e2a342\spring-aop-4.3.13.RELEASE.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.aspectj\aspectjweaver\1.8.13\ad94df2a28d658a40dc27bbaff6a1ce5fbf04e9b\aspectjweaver-1.8.13.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-tomcat\1.5.9.RELEASE\4615056f8a2bcad03ba8cdf410419ee3d101c5bb\spring-boot-starter-tomcat-1.5.9.RELEASE.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.hibernate\hibernate-validator\5.3.6.Final\4c730be8bf55a8e9a61e79a2f2c079abf48b718\hibernate-validator-5.3.6.Final.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-databind\2.8.10\f7b83cb2bc4b88d53961e749e1ad32f49ef017b7\jackson-databind-2.8.10.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.mybatis\mybatis\3.4.5\5200759b13f70652995fd206a52fdc98b01c65cd\mybatis-3.4.5.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.mybatis\mybatis-spring\1.3.1\5197169e15a43066f177a1cd12a098e1283fdc76\mybatis-spring-1.3.1.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\com.mitchellbosecke\pebble\2.4.0\4f4b48387683274913d00cb882f2cb84dfd5d57f\pebble-2.4.0.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\com.jayway.jsonpath\json-path\2.2.0\22290d17944bd239fabf5ac69005a60a7ecbbbcb\json-path-2.2.0.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-logging\1.5.9.RELEASE\30fd62a1ce9639759d90d49608501082314c1628\spring-boot-starter-logging-1.5.9.RELEASE.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\ch.qos.logback\logback-classic\1.1.11\ccedfbacef4a6515d2983e3f89ed753d5d4fb665\logback-classic-1.1.11.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.slf4j\jcl-over-slf4j\1.7.25\f8c32b13ff142a513eeb5b6330b1588dcb2c0461\jcl-over-slf4j-1.7.25.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.slf4j\jul-to-slf4j\1.7.25\af5364cd6679bfffb114f0dec8a157aaa283b76\jul-to-slf4j-1.7.25.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.slf4j\log4j-over-slf4j\1.7.25\a87bb47468f47ee7aabbd54f93e133d4215769c3\log4j-over-slf4j-1.7.25.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.slf4j\slf4j-api\1.7.25\da76ca59f6a57ee3102f8f9bd9cee742973efa8a\slf4j-api-1.7.25.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.apache.tomcat.embed\tomcat-embed-websocket\8.5.23\52f07abcae10dc7e1764304b0877def175c2c833\tomcat-embed-websocket-8.5.23.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.apache.tomcat.embed\tomcat-embed-core\8.5.23\79261793a47f507890ee08f749b9d81774e4f7f0\tomcat-embed-core-8.5.23.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.apache.tomcat.embed\tomcat-embed-el\8.5.23\98d979cde444dffa6d434c8377d0123b2dfa614c\tomcat-embed-el-8.5.23.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.eclipse.jdt\ecj\3.12.3\ade950992eb3caf6ab4f1a88706c755f0bf213d9\ecj-3.12.3.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\junit\junit\4.12\2973d150c0dc1fefe998f834810d68f278ea58ec\junit-4.12.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.assertj\assertj-core\2.6.0\b532c3fc4f66bcfee4989a3514f1cd56203a33ad\assertj-core-2.6.0.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.mockito\mockito-core\1.10.19\e8546f5bef4e061d8dd73895b4e8f40e3fe6effe\mockito-core-1.10.19.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.hamcrest\hamcrest-library\1.3\4785a3c21320980282f9f33d0d1264a69040538f\hamcrest-library-1.3.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.hamcrest\hamcrest-core\1.3\42a25dc3219429f0e5d060061f71acb49bf010a0\hamcrest-core-1.3.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.skyscreamer\jsonassert\1.4.0\9cdbb373a06f6513e51e8c545ee6a5e981463edb\jsonassert-1.4.0.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.springframework\spring-test\4.3.13.RELEASE\f4ff71b0d628d37f334d4f1f197c1b8cea364d01\spring-test-4.3.13.RELEASE.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.springframework\spring-jdbc\4.3.13.RELEASE\68e95c2a065641559c7dab7b605bc5847ab026ad\spring-jdbc-4.3.13.RELEASE.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.springframework\spring-tx\4.3.13.RELEASE\6ebf7b3f2099fa884038d9d7bd44817ebd9c5b4a\spring-tx-4.3.13.RELEASE.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.springframework\spring-beans\4.3.13.RELEASE\8613a7077722f1d97f8cb3fea4b0b40bfadf4496\spring-beans-4.3.13.RELEASE.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.springframework\spring-expression\4.3.13.RELEASE\da22bf7df1262e429b49653be6cd5b89b6affe5e\spring-expression-4.3.13.RELEASE.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.springframework\spring-core\4.3.13.RELEASE\eea18d7f4d01f1baa1b6728b678b5a6fe23c61f6\spring-core-4.3.13.RELEASE.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.yaml\snakeyaml\1.17\7a27ea250c5130b2922b86dea63cbb1cc10a660c\snakeyaml-1.17.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\aopalliance\aopalliance\1.0\235ba8b489512805ac13a8f9ea77a1ca5ebe3e8\aopalliance-1.0.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\javax.validation\validation-api\1.1.0.Final\8613ae82954779d518631e05daa73a6a954817d5\validation-api-1.1.0.Final.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.jboss.logging\jboss-logging\3.3.1.Final\c46217ab74b532568c0ed31dc599db3048bd1b67\jboss-logging-3.3.1.Final.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\com.fasterxml\classmate\1.3.4\3d5f48f10bbe4eb7bd862f10c0583be2e0053c6\classmate-1.3.4.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-annotations\2.8.0\45b426f7796b741035581a176744d91090e2e6fb\jackson-annotations-2.8.0.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-core\2.8.10\eb21a035c66ad307e66ec8fce37f5d50fd62d039\jackson-core-2.8.10.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.apache.tomcat\tomcat-jdbc\8.5.23\6036400a8f2d90dd3ae3a4d09e5136c56002887b\tomcat-jdbc-8.5.23.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\com.google.guava\guava\16.0.1\5fa98cd1a63c99a44dd8d3b77e4762b066a5d0c5\guava-16.0.1.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\com.coverity.security\coverity-escapers\1.1\5602837daaf4973eb1def46b7d898aea3785fc39\coverity-escapers-1.1.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.apache.tomcat\tomcat-annotations-api\8.5.23\aaf17df9fe0240e9e9d5375d24d5f177174b73d9\tomcat-annotations-api-8.5.23.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\net.minidev\json-smart\2.2.1\5b9e5df7a62d1279b70dc882b041d249c4f0b002\json-smart-2.2.1.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.objenesis\objenesis\2.1\87c0ea803b69252868d09308b4618f766f135a96\objenesis-2.1.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\com.vaadin.external.google\android-json\0.0.20131108.vaadin1\fa26d351fe62a6a17f5cda1287c1c6110dec413f\android-json-0.0.20131108.vaadin1.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.apache.tomcat\tomcat-juli\8.5.23\98e7f0610b7b2fb8303f11be0210e3f5a56a7d55\tomcat-juli-8.5.23.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\net.minidev\accessors-smart\1.1\a527213f2fea112a04c9bdf0ec0264e34104cd08\accessors-smart-1.1.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\ch.qos.logback\logback-core\1.1.11\88b8df40340eed549fb07e2613879bf6b006704d\logback-core-1.1.11.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm\5.0.3\dcc2193db20e19e1feca8b1240dbbc4e190824fa\asm-5.0.3.jar, user.name=mui, java.vm.specification.version=1.8, sun.java.command=worker.org.gradle.process.internal.worker.GradleWorkerMain 'Gradle Test Executor 4', java.home=C:\cku_project\app\jdk1.8.0_121\jre, sun.arch.data.model=64, user.language=ko, java.specification.vendor=Oracle Corporation, awt.toolkit=sun.awt.windows.WToolkit, java.vm.info=mixed mode, java.version=1.8.0_121, java.ext.dirs=C:\cku_project\app\jdk1.8.0_121\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext, sun.boot.class.path=C:\cku_project\app\jdk1.8.0_121\jre\lib\resources.jar;C:\cku_project\app\jdk1.8.0_121\jre\lib\rt.jar;C:\cku_project\app\jdk1.8.0_121\jre\lib\sunrsasign.jar;C:\cku_project\app\jdk1.8.0_121\jre\lib\jsse.jar;C:\cku_project\app\jdk1.8.0_121\jre\lib\jce.jar;C:\cku_project\app\jdk1.8.0_121\jre\lib\charsets.jar;C:\cku_project\app\jdk1.8.0_121\jre\lib\jfr.jar;C:\cku_project\app\jdk1.8.0_121\jre\classes, java.vendor=Oracle Corporation, org.gradle.test.worker=4, file.separator=\, java.vendor.url.bug=http://bugreport.sun.com/bugreport/, sun.io.unicode.encoding=UnicodeLittle, sun.cpu.endian=little, sun.desktop=windows, sun.cpu.isalist=amd64}}, SystemEnvironmentPropertySource@346329946 {name='systemEnvironment', properties={PATH=E:\app\무무\무무\product\11.2.0\client_1;E:\app\product\11.2.0\dbhome_1\bin;C:\ProgramData\Oracle\Java\javapath;C:\cku_project\app\jdk1.8.0_121\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\libnvvp;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\mui\Documents\gradle\bin;C:\Users\mui\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Bandizip\;, APP_HOME=C:\Users\mui\Documents\gradle\bin\.., DEFAULT_JVM_OPTS=&quot;-Xmx64m&quot;, GRADLE_OPTS=, PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.JS;.WS;.MSC, COMSPEC=C:\WINDOWS\system32\cmd.exe, JAVA_HOME=C:\cku_project\app\jdk1.8.0_121, PROMPT=$P$G, JAVA_OPTS=, CLASSPATH=C:\Users\mui\Documents\gradle\bin\..\lib\gradle-launcher-5.1.jar, ANDROID_HOME=, APP_BASE_NAME=gradle, GRADLE_HOME=C:\Users\mui\Documents\gradle, SystemDrive=C:, SystemRoot=C:\WINDOWS, TEMP=C:\Users\mui\AppData\Local\Temp, =C:=C:\workspace\pebbleTest, USERPROFILE=C:\Users\mui, TMP=C:\Users\mui\AppData\Local\Temp, DIRNAME=C:\Users\mui\Documents\gradle\bin\, JAVA_EXE=C:\cku_project\app\jdk1.8.0_121/bin/java.exe, CMD_LINE_ARGS=--daemon -b C:\workspace\pebbleTest\build.gradle build, HOME=, _SKIP=2}}]
+17:49:06.763 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved classpath location [com/example/springpebble/control/] to resources [URL [file:/C:/workspace/pebbleTest/build/classes/java/test/com/example/springpebble/control/], URL [file:/C:/workspace/pebbleTest/build/classes/java/main/com/example/springpebble/control/]]
+17:49:06.764 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [C:\workspace\pebbleTest\build\classes\java\test\com\example\springpebble\control]
+17:49:06.765 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [C:\workspace\pebbleTest\build\classes\java\test\com\example\springpebble\control] for files matching pattern [C:/workspace/pebbleTest/build/classes/java/test/com/example/springpebble/control/*.class]
+17:49:06.768 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [C:\workspace\pebbleTest\build\classes\java\main\com\example\springpebble\control]
+17:49:06.769 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [C:\workspace\pebbleTest\build\classes\java\main\com\example\springpebble\control] for files matching pattern [C:/workspace/pebbleTest/build/classes/java/main/com/example/springpebble/control/*.class]
+17:49:06.769 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved location pattern [classpath*:com/example/springpebble/control/*.class] to resources [file [C:\workspace\pebbleTest\build\classes\java\test\com\example\springpebble\control\BoardControllerTest.class], file [C:\workspace\pebbleTest\build\classes\java\main\com\example\springpebble\control\BoardController.class]]
+17:49:06.798 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved classpath location [com/example/springpebble/] to resources [URL [file:/C:/workspace/pebbleTest/build/classes/java/test/com/example/springpebble/], URL [file:/C:/workspace/pebbleTest/build/classes/java/main/com/example/springpebble/]]
+17:49:06.798 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [C:\workspace\pebbleTest\build\classes\java\test\com\example\springpebble]
+17:49:06.799 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [C:\workspace\pebbleTest\build\classes\java\test\com\example\springpebble] for files matching pattern [C:/workspace/pebbleTest/build/classes/java/test/com/example/springpebble/*.class]
+17:49:06.800 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [C:\workspace\pebbleTest\build\classes\java\main\com\example\springpebble]
+17:49:06.800 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [C:\workspace\pebbleTest\build\classes\java\main\com\example\springpebble] for files matching pattern [C:/workspace/pebbleTest/build/classes/java/main/com/example/springpebble/*.class]
+17:49:06.803 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved location pattern [classpath*:com/example/springpebble/*.class] to resources [file [C:\workspace\pebbleTest\build\classes\java\test\com\example\springpebble\SpringPebbleApplicationTests.class], file [C:\workspace\pebbleTest\build\classes\java\main\com\example\springpebble\ServletInitializer.class], file [C:\workspace\pebbleTest\build\classes\java\main\com\example\springpebble\SpringPebbleApplication.class]]
+17:49:06.834 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [C:\workspace\pebbleTest\build\classes\java\main\com\example\springpebble\SpringPebbleApplication.class]
+17:49:06.835 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.springpebble.SpringPebbleApplication for test class com.example.springpebble.control.BoardControllerTest
+17:49:06.841 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.example.springpebble.control.BoardControllerTest]: using defaults.
+17:49:06.846 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+17:49:06.873 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@56a478d, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@25810232, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@41f5a3a4, org.springframework.test.context.support.DirtiesContextTestExecutionListener@541a82ff, org.springframework.test.context.transaction.TransactionalTestExecutionListener@39bf1de, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2ea6e30d, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@42a28dfe, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@422fe22f, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1e66feb5, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@7c1c8ff, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@51da7884, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@6cd9c60a, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@45631e72]
+17:49:06.876 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.example.springpebble.control.BoardControllerTest]
+17:49:06.877 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.example.springpebble.control.BoardControllerTest]
+17:49:06.877 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.example.springpebble.control.BoardControllerTest]
+17:49:06.878 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.example.springpebble.control.BoardControllerTest]
+17:49:06.882 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@b667029 testClass = BoardControllerTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@7cb5ea29 testClass = BoardControllerTest, locations = '{}', classes = '{class com.example.springpebble.SpringPebbleApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@e15536, org.springframework.boot.test.context.SpringBootTestContextCustomizer@2d3c865d, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@492b6a4a, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@6fd6ed1b, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]]], class annotated with @DirtiesContext [false] with mode [null].
+17:49:06.883 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.example.springpebble.control.BoardControllerTest]
+17:49:06.883 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.example.springpebble.control.BoardControllerTest]
+17:49:06.956 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Adding PropertySource 'systemProperties' with lowest search precedence
+17:49:06.956 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Adding PropertySource 'systemEnvironment' with lowest search precedence
+17:49:06.957 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [MapPropertySource@1814663079 {name='systemProperties', properties={java.runtime.name=Java(TM) SE Runtime Environment, sun.boot.library.path=C:\cku_project\app\jdk1.8.0_121\jre\bin, java.vm.version=25.121-b13, java.vm.vendor=Oracle Corporation, java.vendor.url=http://java.oracle.com/, path.separator=;, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, file.encoding.pkg=sun.io, user.script=, sun.java.launcher=SUN_STANDARD, user.country=KR, sun.os.patch.level=, java.vm.specification.name=Java Virtual Machine Specification, user.dir=C:\workspace\pebbleTest, java.runtime.version=1.8.0_121-b13, java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment, java.endorsed.dirs=C:\cku_project\app\jdk1.8.0_121\jre\lib\endorsed, os.arch=amd64, java.io.tmpdir=C:\Users\mui\AppData\Local\Temp\, line.separator=
+, java.vm.specification.vendor=Oracle Corporation, user.variant=, os.name=Windows 10, sun.jnu.encoding=MS949, java.library.path=C:\cku_project\app\jdk1.8.0_121\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;E:\app\무무\무무\product\11.2.0\client_1;E:\app\product\11.2.0\dbhome_1\bin;C:\ProgramData\Oracle\Java\javapath;C:\cku_project\app\jdk1.8.0_121\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\libnvvp;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\mui\Documents\gradle\bin;C:\Users\mui\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Bandizip\;;., java.specification.name=Java Platform API Specification, java.class.version=52.0, org.gradle.native=false, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, os.version=10.0, user.home=C:\Users\mui, user.timezone=Asia/Seoul, java.awt.printerjob=sun.awt.windows.WPrinterJob, file.encoding=x-windows-949, java.specification.version=1.8, java.class.path=C:\workspace\pebbleTest\build\classes\java\test;C:\workspace\pebbleTest\build\resources\test;C:\workspace\pebbleTest\build\classes\java\main;C:\workspace\pebbleTest\build\resources\main;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-aop\1.5.9.RELEASE\fab419df8d7a13968a51ebfcbcad7ef320d66184\spring-boot-starter-aop-1.5.9.RELEASE.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-security\1.5.9.RELEASE\f6ee3598d26440007927c67371406f2433c13e2d\spring-boot-starter-security-1.5.9.RELEASE.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-web\1.5.9.RELEASE\bda9733d5e6ba6d1a97deead1738713dc0631b3e\spring-boot-starter-web-1.5.9.RELEASE.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.mybatis.spring.boot\mybatis-spring-boot-starter\1.3.1\f67bd22f518df4b56e6647c90692529af4715a10\mybatis-spring-boot-starter-1.3.1.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\com.zaxxer\HikariCP\2.7.4\c101cbc2d07c0adffa0857e742229ef785892699\HikariCP-2.7.4.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\com.mitchellbosecke\pebble-spring4\2.4.0\b2811c36eef6f50c6c3ddcdc54d4a7b7094e693e\pebble-spring4-2.4.0.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.apache.tomcat.embed\tomcat-embed-jasper\8.5.23\92c6a7b2622d71d167107e43dd3a346fc59d86e0\tomcat-embed-jasper-8.5.23.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\javax.servlet\javax.servlet-api\3.1.0\3cd63d075497751784b2fa84be59432f4905bf7c\javax.servlet-api-3.1.0.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\mysql\mysql-connector-java\5.1.44\61b6b998192c85bb581c6be90e03dcd4b9079db4\mysql-connector-java-5.1.44.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-test\1.5.9.RELEASE\b5adf6fbf53be00b7ae52f657d564122edbe5156\spring-boot-starter-test-1.5.9.RELEASE.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.springframework.security\spring-security-test\4.2.3.RELEASE\f93339f597290d85a596f25a7841b9109b79ced6\spring-security-test-4.2.3.RELEASE.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-jdbc\1.5.9.RELEASE\6769ecea55e952afb64f17975638c5afd1e59ef3\spring-boot-starter-jdbc-1.5.9.RELEASE.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter\1.5.9.RELEASE\6bfb34db2715ee86c6e2337fa145650588b4b1b3\spring-boot-starter-1.5.9.RELEASE.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.springframework.security\spring-security-config\4.2.3.RELEASE\9f3771903616e33521836fd999d63efbfebf90d\spring-security-config-4.2.3.RELEASE.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.springframework.security\spring-security-web\4.2.3.RELEASE\7a03e737484ca232d7146852f06d067ac21427ac\spring-security-web-4.2.3.RELEASE.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.springframework\spring-webmvc\4.3.13.RELEASE\87a095c7a1d13fe433ae6712787238c1dbaa6919\spring-webmvc-4.3.13.RELEASE.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.springframework\spring-web\4.3.13.RELEASE\7cd084992d546165ede3e99bc31ee49c937f0ce7\spring-web-4.3.13.RELEASE.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.springframework.security\spring-security-core\4.2.3.RELEASE\5c0e47a47036c94d6fdd02696bf52be6d1adbd4d\spring-security-core-4.2.3.RELEASE.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-test-autoconfigure\1.5.9.RELEASE\b428495e25b0531b2a977f51c5d29011c817b8ee\spring-boot-test-autoconfigure-1.5.9.RELEASE.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-test\1.5.9.RELEASE\7e604d56325f04a8b89a280e647746fc69e5a21f\spring-boot-test-1.5.9.RELEASE.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.mybatis.spring.boot\mybatis-spring-boot-autoconfigure\1.3.1\af4ba7d4594459cbad87cb5561c271da26df3aa\mybatis-spring-boot-autoconfigure-1.3.1.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-autoconfigure\1.5.9.RELEASE\88dd18bdaf317ae40971573a051fd47265f2ed39\spring-boot-autoconfigure-1.5.9.RELEASE.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot\1.5.9.RELEASE\f472cdf948288796fb31e0bb03f6e7b022b763a0\spring-boot-1.5.9.RELEASE.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.springframework\spring-context\4.3.13.RELEASE\6ab1c189a13182fa3256f6bbc68fafdaf8f5a19e\spring-context-4.3.13.RELEASE.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.springframework\spring-aop\4.3.13.RELEASE\61f427b55951f59b50f3c2bd0de3c48960e2a342\spring-aop-4.3.13.RELEASE.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.aspectj\aspectjweaver\1.8.13\ad94df2a28d658a40dc27bbaff6a1ce5fbf04e9b\aspectjweaver-1.8.13.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-tomcat\1.5.9.RELEASE\4615056f8a2bcad03ba8cdf410419ee3d101c5bb\spring-boot-starter-tomcat-1.5.9.RELEASE.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.hibernate\hibernate-validator\5.3.6.Final\4c730be8bf55a8e9a61e79a2f2c079abf48b718\hibernate-validator-5.3.6.Final.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-databind\2.8.10\f7b83cb2bc4b88d53961e749e1ad32f49ef017b7\jackson-databind-2.8.10.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.mybatis\mybatis\3.4.5\5200759b13f70652995fd206a52fdc98b01c65cd\mybatis-3.4.5.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.mybatis\mybatis-spring\1.3.1\5197169e15a43066f177a1cd12a098e1283fdc76\mybatis-spring-1.3.1.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\com.mitchellbosecke\pebble\2.4.0\4f4b48387683274913d00cb882f2cb84dfd5d57f\pebble-2.4.0.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\com.jayway.jsonpath\json-path\2.2.0\22290d17944bd239fabf5ac69005a60a7ecbbbcb\json-path-2.2.0.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-logging\1.5.9.RELEASE\30fd62a1ce9639759d90d49608501082314c1628\spring-boot-starter-logging-1.5.9.RELEASE.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\ch.qos.logback\logback-classic\1.1.11\ccedfbacef4a6515d2983e3f89ed753d5d4fb665\logback-classic-1.1.11.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.slf4j\jcl-over-slf4j\1.7.25\f8c32b13ff142a513eeb5b6330b1588dcb2c0461\jcl-over-slf4j-1.7.25.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.slf4j\jul-to-slf4j\1.7.25\af5364cd6679bfffb114f0dec8a157aaa283b76\jul-to-slf4j-1.7.25.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.slf4j\log4j-over-slf4j\1.7.25\a87bb47468f47ee7aabbd54f93e133d4215769c3\log4j-over-slf4j-1.7.25.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.slf4j\slf4j-api\1.7.25\da76ca59f6a57ee3102f8f9bd9cee742973efa8a\slf4j-api-1.7.25.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.apache.tomcat.embed\tomcat-embed-websocket\8.5.23\52f07abcae10dc7e1764304b0877def175c2c833\tomcat-embed-websocket-8.5.23.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.apache.tomcat.embed\tomcat-embed-core\8.5.23\79261793a47f507890ee08f749b9d81774e4f7f0\tomcat-embed-core-8.5.23.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.apache.tomcat.embed\tomcat-embed-el\8.5.23\98d979cde444dffa6d434c8377d0123b2dfa614c\tomcat-embed-el-8.5.23.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.eclipse.jdt\ecj\3.12.3\ade950992eb3caf6ab4f1a88706c755f0bf213d9\ecj-3.12.3.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\junit\junit\4.12\2973d150c0dc1fefe998f834810d68f278ea58ec\junit-4.12.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.assertj\assertj-core\2.6.0\b532c3fc4f66bcfee4989a3514f1cd56203a33ad\assertj-core-2.6.0.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.mockito\mockito-core\1.10.19\e8546f5bef4e061d8dd73895b4e8f40e3fe6effe\mockito-core-1.10.19.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.hamcrest\hamcrest-library\1.3\4785a3c21320980282f9f33d0d1264a69040538f\hamcrest-library-1.3.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.hamcrest\hamcrest-core\1.3\42a25dc3219429f0e5d060061f71acb49bf010a0\hamcrest-core-1.3.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.skyscreamer\jsonassert\1.4.0\9cdbb373a06f6513e51e8c545ee6a5e981463edb\jsonassert-1.4.0.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.springframework\spring-test\4.3.13.RELEASE\f4ff71b0d628d37f334d4f1f197c1b8cea364d01\spring-test-4.3.13.RELEASE.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.springframework\spring-jdbc\4.3.13.RELEASE\68e95c2a065641559c7dab7b605bc5847ab026ad\spring-jdbc-4.3.13.RELEASE.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.springframework\spring-tx\4.3.13.RELEASE\6ebf7b3f2099fa884038d9d7bd44817ebd9c5b4a\spring-tx-4.3.13.RELEASE.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.springframework\spring-beans\4.3.13.RELEASE\8613a7077722f1d97f8cb3fea4b0b40bfadf4496\spring-beans-4.3.13.RELEASE.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.springframework\spring-expression\4.3.13.RELEASE\da22bf7df1262e429b49653be6cd5b89b6affe5e\spring-expression-4.3.13.RELEASE.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.springframework\spring-core\4.3.13.RELEASE\eea18d7f4d01f1baa1b6728b678b5a6fe23c61f6\spring-core-4.3.13.RELEASE.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.yaml\snakeyaml\1.17\7a27ea250c5130b2922b86dea63cbb1cc10a660c\snakeyaml-1.17.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\aopalliance\aopalliance\1.0\235ba8b489512805ac13a8f9ea77a1ca5ebe3e8\aopalliance-1.0.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\javax.validation\validation-api\1.1.0.Final\8613ae82954779d518631e05daa73a6a954817d5\validation-api-1.1.0.Final.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.jboss.logging\jboss-logging\3.3.1.Final\c46217ab74b532568c0ed31dc599db3048bd1b67\jboss-logging-3.3.1.Final.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\com.fasterxml\classmate\1.3.4\3d5f48f10bbe4eb7bd862f10c0583be2e0053c6\classmate-1.3.4.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-annotations\2.8.0\45b426f7796b741035581a176744d91090e2e6fb\jackson-annotations-2.8.0.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-core\2.8.10\eb21a035c66ad307e66ec8fce37f5d50fd62d039\jackson-core-2.8.10.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.apache.tomcat\tomcat-jdbc\8.5.23\6036400a8f2d90dd3ae3a4d09e5136c56002887b\tomcat-jdbc-8.5.23.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\com.google.guava\guava\16.0.1\5fa98cd1a63c99a44dd8d3b77e4762b066a5d0c5\guava-16.0.1.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\com.coverity.security\coverity-escapers\1.1\5602837daaf4973eb1def46b7d898aea3785fc39\coverity-escapers-1.1.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.apache.tomcat\tomcat-annotations-api\8.5.23\aaf17df9fe0240e9e9d5375d24d5f177174b73d9\tomcat-annotations-api-8.5.23.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\net.minidev\json-smart\2.2.1\5b9e5df7a62d1279b70dc882b041d249c4f0b002\json-smart-2.2.1.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.objenesis\objenesis\2.1\87c0ea803b69252868d09308b4618f766f135a96\objenesis-2.1.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\com.vaadin.external.google\android-json\0.0.20131108.vaadin1\fa26d351fe62a6a17f5cda1287c1c6110dec413f\android-json-0.0.20131108.vaadin1.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.apache.tomcat\tomcat-juli\8.5.23\98e7f0610b7b2fb8303f11be0210e3f5a56a7d55\tomcat-juli-8.5.23.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\net.minidev\accessors-smart\1.1\a527213f2fea112a04c9bdf0ec0264e34104cd08\accessors-smart-1.1.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\ch.qos.logback\logback-core\1.1.11\88b8df40340eed549fb07e2613879bf6b006704d\logback-core-1.1.11.jar;C:\Users\mui\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm\5.0.3\dcc2193db20e19e1feca8b1240dbbc4e190824fa\asm-5.0.3.jar, user.name=mui, java.vm.specification.version=1.8, sun.java.command=worker.org.gradle.process.internal.worker.GradleWorkerMain 'Gradle Test Executor 4', java.home=C:\cku_project\app\jdk1.8.0_121\jre, sun.arch.data.model=64, user.language=ko, java.specification.vendor=Oracle Corporation, awt.toolkit=sun.awt.windows.WToolkit, java.vm.info=mixed mode, java.version=1.8.0_121, java.ext.dirs=C:\cku_project\app\jdk1.8.0_121\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext, sun.boot.class.path=C:\cku_project\app\jdk1.8.0_121\jre\lib\resources.jar;C:\cku_project\app\jdk1.8.0_121\jre\lib\rt.jar;C:\cku_project\app\jdk1.8.0_121\jre\lib\sunrsasign.jar;C:\cku_project\app\jdk1.8.0_121\jre\lib\jsse.jar;C:\cku_project\app\jdk1.8.0_121\jre\lib\jce.jar;C:\cku_project\app\jdk1.8.0_121\jre\lib\charsets.jar;C:\cku_project\app\jdk1.8.0_121\jre\lib\jfr.jar;C:\cku_project\app\jdk1.8.0_121\jre\classes, java.vendor=Oracle Corporation, org.gradle.test.worker=4, file.separator=\, java.vendor.url.bug=http://bugreport.sun.com/bugreport/, sun.io.unicode.encoding=UnicodeLittle, sun.cpu.endian=little, sun.desktop=windows, sun.cpu.isalist=amd64}}, SystemEnvironmentPropertySource@1453956627 {name='systemEnvironment', properties={PATH=E:\app\무무\무무\product\11.2.0\client_1;E:\app\product\11.2.0\dbhome_1\bin;C:\ProgramData\Oracle\Java\javapath;C:\cku_project\app\jdk1.8.0_121\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\libnvvp;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\mui\Documents\gradle\bin;C:\Users\mui\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Bandizip\;, APP_HOME=C:\Users\mui\Documents\gradle\bin\.., DEFAULT_JVM_OPTS=&quot;-Xmx64m&quot;, GRADLE_OPTS=, PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.JS;.WS;.MSC, COMSPEC=C:\WINDOWS\system32\cmd.exe, JAVA_HOME=C:\cku_project\app\jdk1.8.0_121, PROMPT=$P$G, JAVA_OPTS=, CLASSPATH=C:\Users\mui\Documents\gradle\bin\..\lib\gradle-launcher-5.1.jar, ANDROID_HOME=, APP_BASE_NAME=gradle, GRADLE_HOME=C:\Users\mui\Documents\gradle, SystemDrive=C:, SystemRoot=C:\WINDOWS, TEMP=C:\Users\mui\AppData\Local\Temp, =C:=C:\workspace\pebbleTest, USERPROFILE=C:\Users\mui, TMP=C:\Users\mui\AppData\Local\Temp, DIRNAME=C:\Users\mui\Documents\gradle\bin\, JAVA_EXE=C:\cku_project\app\jdk1.8.0_121/bin/java.exe, CMD_LINE_ARGS=--daemon -b C:\workspace\pebbleTest\build.gradle build, HOME=, _SKIP=2}}]
+17:49:06.960 [Test worker] DEBUG org.springframework.core.env.MutablePropertySources - Adding PropertySource 'inline' with highest search precedence
+17:49:06.967 [Test worker] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=-1}
+17:49:06.967 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Adding PropertySource 'Inlined Test Properties' with highest search precedence
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.5.9.RELEASE)
+
+2019-01-06 17:49:07.424  INFO 12316 --- [    Test worker] c.e.s.control.BoardControllerTest        : Starting BoardControllerTest on DESKTOP-TVPS04N with PID 12316 (started by mui in C:\workspace\pebbleTest)
+2019-01-06 17:49:07.425  INFO 12316 --- [    Test worker] c.e.s.control.BoardControllerTest        : The following profiles are active: local
+2019-01-06 17:49:07.468  INFO 12316 --- [    Test worker] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@40796531: startup date [Sun Jan 06 17:49:07 KST 2019]; root of context hierarchy
+2019-01-06 17:49:08.454  INFO 12316 --- [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'dataSource' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Generic; factoryMethodName=dataSource; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Generic.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari; factoryMethodName=dataSource; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]]
+2019-01-06 17:49:10.854  INFO 12316 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@40796531: startup date [Sun Jan 06 17:49:07 KST 2019]; root of context hierarchy
+2019-01-06 17:49:10.976  INFO 12316 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/ || /board/list],methods=[GET]}&quot; onto public org.springframework.web.servlet.ModelAndView com.example.springpebble.control.BoardController.boardList(com.example.springpebble.model.BoardSearch)
+2019-01-06 17:49:10.980  INFO 12316 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/error]}&quot; onto public org.springframework.http.ResponseEntity&lt;java.util.Map&lt;java.lang.String, java.lang.Object&gt;&gt; org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-01-06 17:49:10.981  INFO 12316 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped &quot;{[/error],produces=[text/html]}&quot; onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-01-06 17:49:11.048  INFO 12316 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/resources/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-06 17:49:11.049  INFO 12316 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-06 17:49:11.049  INFO 12316 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-06 17:49:11.053  INFO 12316 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler]
+2019-01-06 17:49:11.193  INFO 12316 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-06 17:49:11.747  INFO 12316 --- [    Test worker] b.a.s.AuthenticationManagerConfiguration : 
+
+Using default security password: 82412ff8-7e46-444a-b09d-ddf0ccbfdeec
+
+2019-01-06 17:49:11.831  INFO 12316 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/css/**'], Ant [pattern='/js/**'], Ant [pattern='/images/**'], Ant [pattern='/webjars/**'], Ant [pattern='/**/favicon.ico'], Ant [pattern='/error']]], []
+2019-01-06 17:49:11.937  INFO 12316 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.boot.autoconfigure.security.SpringBootWebSecurityConfiguration$ApplicationNoWebSecurityConfigurerAdapter$1@2944f068, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@355ce1f7, org.springframework.security.web.context.SecurityContextPersistenceFilter@3368928d, org.springframework.security.web.header.HeaderWriterFilter@7ada13f, org.springframework.security.web.csrf.CsrfFilter@58bc2ea6, org.springframework.security.web.authentication.logout.LogoutFilter@e27adad, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@48c8af63, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2a0165a8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6257834, org.springframework.security.web.session.SessionManagementFilter@166c5306, org.springframework.security.web.access.ExceptionTranslationFilter@3c67a6ce]
+2019-01-06 17:49:12.255  INFO 12316 --- [    Test worker] c.e.s.control.BoardControllerTest        : Started BoardControllerTest in 5.276 seconds (JVM running for 6.357)
+2019-01-06 17:49:12.347  WARN 12316 --- [    Test worker] com.zaxxer.hikari.HikariConfig           : pebble - maxLifetime is less than 30000ms, setting to default 1800000ms.
+2019-01-06 17:49:12.349  INFO 12316 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : pebble - Starting...
+2019-01-06 17:49:15.543 ERROR 12316 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : pebble - Exception during pool initialization.
+
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_121]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_121]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_121]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_121]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:989) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:341) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2189) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2222) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2017) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:779) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:47) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_121]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_121]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_121]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_121]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:117) ~[HikariCP-2.7.4.jar:na]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:123) ~[HikariCP-2.7.4.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:375) ~[HikariCP-2.7.4.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:204) ~[HikariCP-2.7.4.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:459) [HikariCP-2.7.4.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:533) [HikariCP-2.7.4.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.&lt;init&gt;(HikariPool.java:114) [HikariCP-2.7.4.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:97) [HikariCP-2.7.4.jar:na]
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:111) [spring-jdbc-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:77) [spring-jdbc-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:82) [mybatis-spring-1.3.1.jar:1.3.1]
+	at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:68) [mybatis-spring-1.3.1.jar:1.3.1]
+	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:336) [mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:84) [mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62) [mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324) [mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156) [mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:136) [mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:148) [mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:141) [mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:77) [mybatis-3.4.5.jar:3.4.5]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_121]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_121]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_121]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_121]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433) [mybatis-spring-1.3.1.jar:1.3.1]
+	at com.sun.proxy.$Proxy75.selectOne(Unknown Source) [na:na]
+	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:166) [mybatis-spring-1.3.1.jar:1.3.1]
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:82) [mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:59) [mybatis-3.4.5.jar:3.4.5]
+	at com.sun.proxy.$Proxy76.selectBoardCount(Unknown Source) [na:na]
+	at com.example.springpebble.service.BoardService.selectBoardCount(BoardService.java:24) [main/:na]
+	at com.example.springpebble.control.BoardControllerTest.board_list_count(BoardControllerTest.java:25) [test/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_121]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_121]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_121]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_121]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:252) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191) [spring-test-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110) [gradle-testing-jvm-5.1.jar:5.1]
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58) [gradle-testing-jvm-5.1.jar:5.1]
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38) [gradle-testing-jvm-5.1.jar:5.1]
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62) [gradle-testing-jvm-5.1.jar:5.1]
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51) [gradle-testing-base-5.1.jar:5.1]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_121]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_121]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_121]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_121]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35) [gradle-messaging-5.1.jar:5.1]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24) [gradle-messaging-5.1.jar:5.1]
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32) [gradle-messaging-5.1.jar:5.1]
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93) [gradle-messaging-5.1.jar:5.1]
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source) [na:na]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:118) [gradle-testing-base-5.1.jar:5.1]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_121]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_121]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_121]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_121]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35) [gradle-messaging-5.1.jar:5.1]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24) [gradle-messaging-5.1.jar:5.1]
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:175) [gradle-messaging-5.1.jar:5.1]
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:157) [gradle-messaging-5.1.jar:5.1]
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404) [gradle-messaging-5.1.jar:5.1]
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63) [gradle-base-services-5.1.jar:5.1]
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:46) [gradle-base-services-5.1.jar:5.1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_121]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_121]
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55) [gradle-base-services-5.1.jar:5.1]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_121]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_121]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_121]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_121]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_121]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_121]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_121]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_121]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_121]
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:300) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	... 98 common frames omitted
+
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 5.1</a> at 2019. 1. 6 오후 5:49:15</p>
+</div>
+</div>
+</body>
+</html>

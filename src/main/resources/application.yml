@@ -1,0 +1,23 @@
+spring:
+  profiles:
+    active: local
+
+---
+spring:
+  profiles: local
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@localhost:1521:orcl
+    username: system
+    password: oracle
+    hikari:
+      pool-name: pebble
+      maximum-pool-size: 10
+      max-lifetime: 30
+security:
+  basic:
+    enabled: false
+
+server:
+  context-path: /
